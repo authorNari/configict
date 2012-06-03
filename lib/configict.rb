@@ -1,7 +1,8 @@
 require "erb"
 require "yaml"
 
-module Confliction
+module Configict
+  class LoadError < StandardError; end
   def self.load_yml(path)
     config = YAML.load(ERB.new(File.read(path)).result)
     example_config = example_config(path)
@@ -13,7 +14,7 @@ module Confliction
         res << ""
         res << "You must not specify follow keys in config file (#{path}):"
         res += diff['+'].map{|d| "+ #{d}"}
-        raise res.join("\n")
+        raise LoadError, "\n" + res.join("\n")
       end
     end
     return config

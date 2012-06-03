@@ -1,3 +1,3 @@
-module Confliction
+module Configict
   VERSION = "0.0.1"
 end

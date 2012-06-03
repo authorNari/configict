@@ -1,11 +1,11 @@
-class TestConfliction < Test::Unit::TestCase
+class TestConfigict < Test::Unit::TestCase
   def test_load_yml
-    Confliction.load_yml(File.join(
+    Configict.load_yml(File.join(
       File.dirname(__FILE__),
       "fixtures/config_loader.yml"))
 
-    assert_raise(RuntimeError) do
-      Confliction.load_yml(File.join(
+    assert_raise(Configict::LoadError) do
+      Configict.load_yml(File.join(
         File.dirname(__FILE__),
         "fixtures/config_loader_has_diff.yml"))
     end

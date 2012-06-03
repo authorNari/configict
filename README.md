@@ -1,4 +1,4 @@
-confliction
+configict
 ===========
 
 A YAML config loader with checking conflict from a example.
@@ -18,8 +18,8 @@ A YAML config loader with checking conflict from a example.
 
 You can load config.yml. 
 
-    require "confliction"
-    p Confliction.load_yml("config.yml")
+    require "configict"
+    p Configict.load_yml("config.yml")
     # => {name: "taro"}
 
 Then, other developer updates config.yml.sample.
@@ -28,10 +28,10 @@ Then, other developer updates config.yml.sample.
     fullname: "sample fullname"
     age: 20
 
-Confliction raises a confiction error when you load it.
+Configict raises a confiction error when you load it.
 
-    require "confliction"
-    p Confliction.load_yml("config.yml")
+    require "configict"
+    p Configict.load_yml("config.yml")
     # => RuntimeError:
     # You must specify follow keys in config file (config.yml)
     # - fullname

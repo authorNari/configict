@@ -1,6 +1,6 @@
 source "http://rubygems.org"
 
-# Specify your gem's dependencies in confliction.gemspec
+# Specify your gem's dependencies in configict.gemspec
 gemspec
 
 group :test do
