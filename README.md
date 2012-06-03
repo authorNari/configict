@@ -32,7 +32,7 @@ Configict raises a confiction error when you load it.
 
     require "configict"
     p Configict.load_yml("config.yml")
-    # => RuntimeError:
+    # => Configict::LoadError:
     # You must specify follow keys in config file (config.yml)
     # - fullname
     # - age
