@@ -1,11 +1,11 @@
 configict
 ===========
 
-A YAML config loader with checking conflict from a example.
+YAML config loader with checking conflict from the example.
 
 ## Features
 
-  * You can load a config .yml file and get a hash from YAML.
+  * You can load a config .yml file and get the hash from YAML.
   * Notify the conflict between .yml and .yml.(example|sample)
 
 ## Usage
@@ -22,13 +22,13 @@ You can load config.yml.
     p Configict.load_yml("config.yml")
     # => {name: "taro"}
 
-Then, other developer updates config.yml.sample.
+Then, a other developer updates config.yml.sample.
 
     # config.yml.sample(committed)
     fullname: "sample fullname"
     age: 20
 
-Configict raises a confiction error when you load it.
+Configict raises the confliction error when you load it.
 
     require "configict"
     p Configict.load_yml("config.yml")
